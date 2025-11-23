@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP API Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .plan {
+            border: 2px solid #ddd;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .free { border-color: #28a745; }
+        .paid { border-color: #ffc107; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .free-btn { background: #28a745; }
+        .free-btn:hover { background: #218838; }
+        .contact {
+            background: #ffc107;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 Telegram OTP API Service</h1>
+    
+    <div class="plan free">
+        <h2>🎁 1 Year Free Plan</h2>
+        <p>Get your free OTP API token for 1 year</p>
+        <button class="free-btn" onclick="showForm()">Get Free Token</button>
+    </div>
+    
+    <div class="plan paid">
+        <h2>💎 1 Month Paid Plan</h2>
+        <p>Premium features with dedicated support</p>
+        <div class="contact">
+            <strong>Contact Owner:</strong> @xthrlen on Telegram
+        </div>
+    </div>
+
+    <div id="form" style="display:none; margin-top: 30px;">
+        <h3>📝 Request Free Token</h3>
+        <form id="tokenForm" style="text-align: left;">
+            <input type="text" name="username" placeholder="Your Telegram Username" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="text" name="user_id" placeholder="Your Telegram User ID" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="url" name="website" placeholder="Your Website Link (optional)" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="text" name="full_name" placeholder="Your Full Name" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="tel" name="phone" placeholder="Your Phone Number" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px;">
+            <button type="submit" style="width: 100%;">Submit Request</button>
+        </form>
+    </div>
+
+    <script>
+        function showForm() {
+            document.getElementById('form').style.display = 'block';
+        }
+
+        document.getElementById('tokenForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Request submitted! Owner will contact you soon on Telegram.');
+            this.reset();
+            document.getElementById('form').style.display = 'none';
+        });
+    </script>
+</body>
+  </html>
