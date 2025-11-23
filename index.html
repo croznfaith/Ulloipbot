@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP API Service</title>
+    <style>
+        .plan { border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px; }
+        .free { background: #e8f5e8; }
+        .paid { background: #fff3cd; }
+    </style>
+</head>
+<body>
+    <h1>OTP API Service Plans</h1>
+    
+    <div class="plan free">
+        <h2>1 Year Free</h2>
+        <button onclick="showForm('free')">Get Free Token</button>
+    </div>
+    
+    <div class="plan paid">
+        <h2>1 Month Paid</h2>
+        <p>Contact: @xthrlen on Telegram</p>
+    </div>
+    
+    <div id="form" style="display:none;">
+        <h3>Request Free Token</h3>
+        <form id="tokenForm">
+            <input type="text" name="username" placeholder="Telegram Username" required>
+            <input type="text" name="token" placeholder="Your Token" required>
+            <input type="number" name="user_id" placeholder="Telegram User ID" required>
+            <input type="url" name="website" placeholder="Website Link">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
